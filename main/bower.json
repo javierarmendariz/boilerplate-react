@@ -1,0 +1,27 @@
+{
+  "name": "main",
+  "version": "0.0.0",
+  "authors": [
+    "Javier Armendariz <email@server.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "public/js/vendors"
+  ],
+  "dependencies": {
+    "jQuery-One-Page-Nav": "~3.0.0",
+    "jquery.sticky": "~1.0.0",
+    "jQuery.TosRUs": "~2.4.1",
+    "less": "~2.5.1",
+    "react": "~0.13.3"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.3.5",
+    "modernizr": "~3.1.0"
+  }
+}

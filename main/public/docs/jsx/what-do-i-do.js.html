@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: what-do-i-do/what-do-i-do.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: what-do-i-do/what-do-i-do.js</h1>
+
+    
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+* Module with some text content (WhatDoIDo).
+* @module What-Do-I-Do
+* @namespace What-Do-I-Do
+* @example
+* // JSX
+* &lt;section id="what-do-i-do">
+*     &lt;Modal show={this.state.showModal} onHide={this.hideModal} bsSize={'lg'}>
+*         &lt;Modal.Body>
+*         &lt;img src="images/diagram-web.jpg" className="img-responsive" border="0" alt="Diagram" />
+*     &lt;/Modal.Body>
+*     &lt;Modal.Footer>
+*     &lt;Button onClick={this.hideModal} className="button-deafult">Close&lt;/Button>
+* &lt;/Modal.Footer>
+* &lt;/Modal>
+* 
+* &lt;Grid>
+* 
+*     &lt;Row>
+*         &lt;Col xs={12} sm={12} md={12} lg={12} xl={12}>
+*             &lt;h1>Let's code!&lt;/h1>
+*             &lt;hr />
+*         &lt;/Col>
+*     &lt;/Row>
+* 
+*     &lt;Row xs={10} xsOffset={1} sm={8} smOffset={2} md={8} mdOffset={2} className="section-box">
+*         &lt;p>
+*             I develop single page applications over 3 layers (MVR): Models/Collections, Views and Router. With Restful APIs connections through Backbone models and jQuery Ajax calls, with the following verbs: Get, Post, Put and Delete. I have been using Underscorejs and Dustjs as Templating system. Semantic HTML and CSS pre-processors make me happy, for this reason I use HTML5 tags and Less. All my development runs through the GIT Workflow or SVN. And I include Node packages and Bower on any of my new projects.
+*         &lt;/p>
+*         &lt;p>
+*             In the following diagram you can see all the technologies I work with, and how I organize my job:
+*         &lt;/p>
+*     &lt;/Row>
+* 
+*     &lt;Row>
+*         &lt;Col sm={12} className="section-box">
+*             &lt;h2 className="text-center">Diagram&lt;/h2>
+*             &lt;p>
+*                 &lt;img src="images/diagram-web.jpg" onClick={this.showModal} className="img-responsive" border="0" alt="Diagram" />
+*             &lt;/p>
+*         &lt;/Col>
+*     &lt;/Row>
+* &lt;/Grid>
+* &lt;/section>
+*/
+
+define([], function () {
+
+    'use strict';
+
+    var Modal = ReactBootstrap.Modal;
+    var Grid = ReactBootstrap.Grid;
+    var Row = ReactBootstrap.Row;
+    var Col = ReactBootstrap.Col;
+    var Button = ReactBootstrap.Button;
+
+    var View = React.createClass({displayName: "View",
+
+        getInitialState: function () {
+
+            var initialStateValues = {
+                showModal: false
+            };
+
+            return initialStateValues;
+        },
+
+        hideModal: function () {
+            this.setState({
+                showModal: false
+            });
+        },
+
+        showModal: function () {
+            this.setState({
+                showModal: true
+            });
+        },
+
+        render: function () {
+            return (
+                React.createElement("section", {id: "what-do-i-do"}, 
+
+                React.createElement(Modal, {show: this.state.showModal, onHide: this.hideModal, bsSize: 'lg'}, 
+                    React.createElement(Modal.Body, null, 
+                        React.createElement("img", {src: "images/diagram-web.jpg", className: "img-responsive", border: "0", alt: "Diagram"})
+                    ), 
+                    React.createElement(Modal.Footer, null, 
+                        React.createElement(Button, {onClick: this.hideModal, className: "button-deafult"}, "Close")
+                    )
+                ), 
+
+                React.createElement(Grid, null, 
+
+                React.createElement(Row, null, 
+                React.createElement(Col, {xs: 12, sm: 12, md: 12, lg: 12, xl: 12}, 
+                React.createElement("h1", null, "Let's code!"), 
+                React.createElement("hr", null)
+                )
+                ), 
+
+                React.createElement(Row, {xs: 10, xsOffset: 1, sm: 8, smOffset: 2, md: 8, mdOffset: 2, className: "section-box"}, 
+                React.createElement("p", null, 
+                "I develop single page applications over 3 layers (MVR): Models/Collections, Views and Router. With Restful APIs connections through Backbone models and jQuery Ajax calls, with the following verbs: Get, Post, Put and Delete. I have been using Underscorejs and Dustjs as Templating system. Semantic HTML and CSS pre-processors make me happy, for this reason I use HTML5 tags and Less. All my development runs through the GIT Workflow or SVN. And I include Node packages and Bower on any of my new projects."
+            ), 
+            React.createElement("p", null, 
+                "In the following diagram you can see all the technologies I work with, and how I organize my job:"
+            )
+            ), 
+
+            React.createElement(Row, null, 
+                React.createElement(Col, {sm: 12, className: "section-box"}, 
+                    React.createElement("h2", {className: "text-center"}, "Diagram"), 
+                    React.createElement("p", null, 
+                            React.createElement("img", {src: "images/diagram-web.jpg", onClick: this.showModal, className: "img-responsive", border: "0", alt: "Diagram"})
+                            )
+                            )
+                            )
+                            )
+                            )
+            );
+        }
+    });
+
+    return View;
+
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Modules</h3><ul><li><a href="module-Main-Menu-Collection.html">Main-Menu-Collection</a></li><li><a href="module-Main-Menu-Items.html">Main-Menu-Items</a></li><li><a href="module-Main-Menu-Link.html">Main-Menu-Link</a></li><li><a href="module-Technologies-Collection.html">Technologies-Collection</a></li><li><a href="module-Technologies-Item.html">Technologies-Item</a></li><li><a href="module-Technologies-List.html">Technologies-List</a></li><li><a href="module-Technologies-Model.html">Technologies-Model</a></li><li><a href="module-Technologies-Title.html">Technologies-Title</a></li></ul><h3>Namespaces</h3><ul><li><a href="About-Me.html">About-Me</a></li><li><a href="Contact-Me.html">Contact-Me</a></li><li><a href="Intro-Launch.html">Intro-Launch</a></li><li><a href="Main-Menu.html">Main-Menu</a></li><li><a href="Technologies.html">Technologies</a></li><li><a href="What-Do-I-Do.html">What-Do-I-Do</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha5</a> on Wed Oct 07 2015 13:02:36 GMT-0500 (CDT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

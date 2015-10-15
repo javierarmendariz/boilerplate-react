@@ -1,0 +1,503 @@
+/* MONO SOCIAL FONT */
+@font-face {
+    font-family: 'Mono Social Icons Font';
+    src: url('../fonts/MonoSocialIconsFont-1.10/MonoSocialIconsFont-1.10.eot?-hdf3wh');
+    src: url('../fonts/MonoSocialIconsFont-1.10/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MonoSocialIconsFont-1.10/MonoSocialIconsFont-1.10.woff') format('woff'),
+        url('../fonts/MonoSocialIconsFont-1.10/MonoSocialIconsFont-1.10.ttf') format('truetype'),
+        url('../fonts/MonoSocialIconsFont-1.10/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+    src: url('../fonts/MonoSocialIconsFont-1.10/MonoSocialIconsFont-1.10.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.symbol, a.symbol:before {
+    font-family: 'Mono Social Icons Font';
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+a.symbol:before {
+    content: attr(title);
+    margin-right: 0.3em;
+    font-size: 130%;
+}
+/* MONO SOCIAL FONT */
+
+/***
+* COLORS:
+*/
+@links: #4081A3;
+
+/**
+* ODD:
+* `@odd` - The Odd Color for Zebra effect.
+*
+*     @example
+*     div.odd text
+*/
+@odd: #eeeeee;
+.odd {
+    background-color: @odd;
+}
+/**
+* EVEN:
+* `@odd` - The Even Color for Zebra effect.
+*
+*     @example
+*     div.even text
+*/
+@even: #ffffff;
+.even {
+    background-color: @even;
+}
+/**
+* ODD/EVEN EXAMPLE:
+* `.odd, .even` - This is an example of the Zebra effect.
+*
+*     @example
+*     ul.nav
+*       li.odd Row 1
+*       li.even Row 2
+*       li.odd Row 3
+*       li.even Row 4
+*       li.odd Row 5
+*/
+
+
+/***
+* GENERAL:
+*/
+html, body {
+    height: 100%;
+}
+
+/**
+* H1:
+* `h1` - Header 1.
+*
+*     @example
+*     h1 Text
+*/
+h1 {
+    text-align: center;
+}
+
+/**
+* H2:
+* `h2` - Header 2.
+*
+*     @example
+*     h2 Text
+*/
+h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+/**
+* H3:
+* `h3` - Header 3.
+*
+*     @example
+*     h3 Text
+*/
+h3 {
+    font-size: 13px;
+}
+
+/**
+* HR:
+* `hr` - Vertical Line.
+*
+*     @example
+*     hr
+*/
+
+hr {
+    border-top: solid 4px @links;
+    width: 75%;
+}
+
+.link-animation:hover {
+    /* Greater than iPhone in Portrait mode */
+    @media(min-width:321px) and (min-height:569px) {
+        margin-left: 10px;
+        font-weight: bold;
+        transition-property: margin-left, font-weight;
+        transition-duration: 0.5s;
+    }
+}
+
+button {
+    border-radius: 5px;
+    width: 100%;
+    border: 0;
+    height: 35px;
+}
+
+/**
+* Button Default:
+* `button.button-deafult` - This is what buttons look like, this is the go to button style.
+*
+*     @example
+*     button.button-deafult Submit
+*/
+.button-deafult {
+    background-color: @links;
+    color: #fff;
+    cursor: pointer;
+}
+
+/**
+* Button Disabled:
+* `button.button-disabled` - I'm afraid I can't let you do that, yet.
+*
+*     @example
+*     button.button-disabled Submit
+*/
+.button-disabled {
+    background-color: #C0C0C0;
+    color: #fff;
+    cursor: default;
+}
+
+body > section {
+    padding: 45px 0;
+}
+
+/**
+* P:
+* `p` - Text Paragraph
+*
+*     @example
+*     p Do greatest at in learning steepest. Breakfast extremity suffering one who all otherwise suspected. He at no nothing forbade up moments. Wholly uneasy at missed be of pretty whence. John way sir high than law who week. Surrounded prosperous introduced it if is up dispatched. Improved so strictly produced answered elegance is.
+*     p Questions explained agreeable preferred strangers too him her son. Set put shyness offices his females him distant. Improve has message besides shy himself cheered however how son. Quick judge other leave ask first chief her. Indeed or remark always silent seemed narrow be. Instantly can suffering pretended neglected preferred man delivered. Perhaps fertile brandon do imagine to cordial cottage.
+*/
+
+.section-box {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.vertical-align-center {
+    align-items: center;
+    display: flex;
+
+    -webkit-align-items: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+}
+
+.height-inherit {
+    height: inherit;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+
+/***
+* FORM:
+*/
+
+/**
+* FORM EXAMPLE:
+* `form` - A form example with inputs and buttons.
+*
+*     @example
+*     form.odd
+*       div.field
+*         label What is your name?
+*         input(type="text", palceholder="Your name here")
+*       div.field
+*         label What is your email?
+*         input(type="text", placeholder="Your email here")
+*       div.field
+*         label What do you have in mind?
+*         textarea(placeholder="Your message here")
+*       div.field
+*         button(type="submit").button-deafult Submit
+*/
+form {
+    padding: 10px;
+    border: 0;
+    margin: 0;
+
+    /**
+    * Label:
+    * `label` - Label.
+    *
+    *     @example
+    *     form.odd
+    *       label What do you have in mind?
+    */
+    label {
+        color: @links;
+    }
+
+    .field {
+        padding: 0;
+        border: 0;
+        margin: 0 0 20px 0;
+    }
+
+    /**
+    * INPUT:
+    * `input, textarea` - input.
+    *
+    *     @example
+    *     form.odd
+    *       input(type="text", placeholder="Your name here")
+    */
+
+    /**
+    * TEXTAREA:
+    * `textarea` - textarea.
+    *
+    *     @example
+    *     form.odd
+    *       textarea(placeholder="Your name here")
+    */
+    input, textarea {
+        border-radius: 5px;
+        width: 100%;
+        border: 0;
+        height: 35px;
+    }
+
+    textarea {
+        height: 120px;
+    }
+}
+
+
+/***
+* COMPONENTS:
+*/
+
+/**
+* Icon:
+* Display a technology icon using the Devicon Font.
+*
+*     @example
+*     p.text-center.technology-icon-container
+*      span.devicon-jquery-plain.technology-icon
+*/
+.technology-icon-container {
+    box-sizing: content-box;
+    background-color: #fff;
+    border: solid 3px #4081a3;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    padding: 2px;
+    margin: 0 auto;
+}
+.technology-icon {
+    font-size: 55px;
+    color: #fff;
+    background-color: @links;
+    border-radius: 100%;
+    border: solid 21px @links;
+    line-height: 1.8;
+}
+
+/**
+* Social Media:
+* Social media buttons
+*
+*     @example
+*     p.social-media
+*         span.symbol roundedtwitter
+*         span.symbol roundedfacebook
+*         span.symbol roundedlinkedin
+*         span.symbol roundednewsvine
+*/
+.social-media {
+    padding: 0;
+    margin-bottom: 5px;
+    border: 0;
+
+    height: 50px;
+
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+
+    transition-property: margin-left;
+    transition-duration: 0.3s;
+
+    &:hover {
+        transition-duration: 0.5s;
+        margin-left: 10px;
+        transition-property:margin-left;
+    }
+
+    span {
+        color: @links;
+        font-size: 60px;
+        margin-right: 13px;
+    }
+
+    a {
+        -webkit-align-items: center;
+        display: -webkit-flex;
+        height: 100%;
+    }
+}
+
+#scaffold {
+    padding: 0;
+    height: 100%;
+}
+
+#intro-launch {
+    padding: 0;
+    border: 0;
+    margin: 0;
+
+    height: 100%;
+
+    color: #fff;
+    background-color: #000;
+    background-image: url(../images/1235536.jpg);
+    background-size: cover;
+
+    background-position-y: -50px;
+
+    /* iPhone Landscape */
+    @media (width:568px) and (height:320px) {
+        background-position-y: -80px;
+        background-position-x: 0px;
+    }
+    @media (min-width:569px) and (max-width:900px) {
+        background-position-x: -160px;
+    }
+    /* iPad Landscape mode*/
+    @media (width:1024px) and (height:768px) {
+        background-position-x: -75px;
+    }
+
+    @media (min-width: 1350px) {
+        background-position-y: -200px;
+    }
+
+    #menu-back-to-top,
+    #back-to-top {
+        z-index: 2;
+    }
+
+    #back-to-top > span {
+        padding: 5px;
+        font-size: 25px;
+        background-color: @links;
+        color: #ffffff;
+        border-radius: 100%;
+    }
+
+}
+
+
+#main-menu {
+
+    position: relative;
+    z-index: 3;
+
+    .navbar {
+        width: 100%;
+        background-color: #B0BEC5;
+        z-index: 2;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 49px;
+
+            li {
+                text-align: center;
+                height: 100%;
+                display: inline-block;
+                width: 24%;
+
+                /* iPad */
+                @media (min-width:1024px) and (min-height:768px) {
+                    width: 25%;
+                }
+                /* iPad */
+            }
+        }
+    }
+
+    .menu {
+        position: absolute;
+        bottom: 0;
+        height: 50px;
+        width: 100%;
+
+        .nav li a {
+            background-color: #B0BEC5;
+            font-weight: bold;
+            color: #23527c;
+            height: 100%;
+        }
+
+        .current {
+            font-weight: bold;
+            a {
+                /* color: #23527c; */
+                border-bottom: solid 4px;
+            }
+
+        }
+    }
+
+}
+
+#what-do-i-do {
+    background-color: @odd;
+}
+
+#technologies {
+    .technologies-item {
+        margin-bottom: 20px;
+        height: 239px;
+    }
+}
+
+#contact-me {
+    background-color: @odd;
+    min-height: 500px;
+}
+
+#landing-darkness {
+    border: solid 1px;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #000;
+    opacity: 0;
+
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#landing-header-text {
+    z-index: 2;
+}
+
+
