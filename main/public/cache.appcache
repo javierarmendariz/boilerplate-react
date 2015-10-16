@@ -1,0 +1,24 @@
+CACHE MANIFEST
+# v1.0 - October 15, 2015
+
+CACHE:
+/dist/App.build.js
+/dist/0.App.build.js
+/images/diagram-web.jpg
+/images/1235536.jpg
+/dist/App.build.css
+/dist/Vendors.build.css
+/fonts/MonoSocialIconsFont-1.10/MonoSocialIconsFont-1.10.ttf
+/dist/fonts/devicon.eot
+/dist/fonts/devicon.svg
+/dist/fonts/devicon.ttf
+/dist/fonts/devicon.woff
+/dist/fonts/devicon.woff?-hdf3wh
+
+NETWORK:
+*
+
+FALLBACK:
+
+SETTINGS:
+prefer-online
